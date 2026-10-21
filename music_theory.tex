@@ -1,0 +1,42 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+
+\title{Music Theory Notes}
+\author{}
+\date{\today}
+
+\setlength{\parskip}{0.3em}
+\setlength{\textfloatsep}{5pt}
+\setlength{\intextsep}{4pt}
+\captionsetup{font=small,skip=2pt}
+
+\begin{document}
+\maketitle
+
+\section{Example score: C major scale}
+
+The score is generated from \texttt{lilypond\_files/example.ly}.
+\begin{center}
+  \includegraphics[width=0.72\textwidth,height=2.5cm,keepaspectratio]{score_pdfs/example.pdf}
+  \captionof{figure}{C major scale.}
+\end{center}
+\noindent\textbf{Audio:} \href{run:audio/example.wav}{Listen to the C major scale (WAV)}.
+
+\section{Modulation example: C major to D major}
+
+This compact piano excerpt illustrates a modulation from C major to D major.
+The harmony is \(\mathrm{C \;-\; C^+/B \;-\; Am \;-\; A^+ \;-\; D}\).
+The score uses a piano grand staff and shows the change from C major to D major,
+including the two-sharp key signature.
+
+\begin{center}
+  \includegraphics[width=0.92\textwidth,height=4.2cm,keepaspectratio]{score_pdfs/modulation.pdf}
+  \captionof{figure}{Piano grand staff: modulation from C major to D major.}
+\end{center}
+\noindent\textbf{Audio:} \href{run:audio/modulation.wav}{Listen to the modulation example (WAV)}.
+
+\end{document}

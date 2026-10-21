@@ -1,0 +1,7 @@
+**/*.mid
+**/*.wav
+**/*.pdf
+
+audio/
+latex_build/
+score_pdfs/
