@@ -1,9 +1,7 @@
+
 \version "2.24.0"
 
 \header {
-  title = "Modulation from C major to D major"
-  subtitle = "Compact piano example"
-  composer = "Music theory notes"
   tagline = ##f
 }
 
@@ -30,29 +28,28 @@ leftHand = \relative c {
   d1 |
 }
 
-
 \paper {
   paper-width = 180\mm
-  paper-height = 65\mm
+  paper-height = 48\mm
   top-margin = 3\mm
-  bottom-margin = 3\mm
+  bottom-margin = 2\mm
   left-margin = 5\mm
   right-margin = 5\mm
   indent = 0\mm
   ragged-bottom = ##t
   ragged-last-bottom = ##t
+  print-page-number = ##f
 }
 
 \score {
   \new PianoStaff <<
-    \new Staff = "right" \with {
-      instrumentName = "Piano"
-    } << \global \rightHand >>
+    \new Staff = "right" << \global \rightHand >>
     \new Staff = "left" << \global \leftHand >>
   >>
   \layout {
-    indent = 0
-    ragged-right = ##t
+    indent = 0\mm
+    ragged-right = ##f
+    ragged-last = ##f
     \context {
       \Score
       \override SpacingSpanner.common-shortest-duration = #(ly:make-moment 1/2)
